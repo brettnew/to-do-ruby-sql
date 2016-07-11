@@ -1,3 +1,8 @@
-<h1>The task has been succussfully submitted!</h1>
+<h1>Here are all your lists. Click on one to add tasks to it:</h1>
 
-<p><a href="/">Back</a></p>
+<ul>
+  <% @lists.each() do |list| %>
+  <li><%= list.name() %></li>
+</ul>
+
+<p><a href="/">Back to Main Page</a></p>
