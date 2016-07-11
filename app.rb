@@ -33,6 +33,12 @@ get("/lists/:id") do
   erb(:list)
 end
 
+get("/lists/:id/sorted") do
+  @list = List.find(params.fetch("id").to_i())
+  # @list.sort()
+  erb(:sorted_lists)
+end
+
 post("/tasks") do
   description = params.fetch("description")
   due_date = params.fetch("due_date")

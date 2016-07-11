@@ -4,7 +4,7 @@
   <h3>Here are all the tasks in this list:</h3>
 
   <ul>
-    <% @list.tasks().each do |task| %>
+    <% @list.sort().each do |task| %>
     <li> <%= task.description() %> - Due Date: <%= task.due_date()[0..10] %> </li>
     <% end %>
   </ul>
